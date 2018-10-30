@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import NodeEnvironment from 'jest-environment-node'
-import puppeteer from 'puppeteer'
+import loadPuppeteer from './loadPuppeteer'
 import chalk from 'chalk'
 import readConfig from './readConfig'
 
@@ -34,6 +34,7 @@ class PuppeteerEnvironment extends NodeEnvironment {
     if (!wsEndpoint) {
       throw new Error('wsEndpoint not found')
     }
+    const puppeteer = await loadPuppeteer()
     this.global.browser = await puppeteer.connect({
       ...config.connect,
       ...config.launch,
