@@ -6,6 +6,9 @@ import {
   ERROR_NO_COMMAND,
 } from 'jest-dev-server'
 import chalk from 'chalk'
+import dns from 'dns'
+import request from 'request-promise-native'
+import { promisify } from 'util';
 import readConfig from './readConfig'
 import loadPuppeteer from './loadPuppeteer'
 
@@ -14,7 +17,15 @@ let browser
 export async function setup() {
   const config = await readConfig()
   const puppeteer = await loadPuppeteer()
-  if (config.connect) {
+  if (config.remote) {
+    const { address } = await promisify(dns.lookup)(config.remote.host)
+    const { body: { webSocketDebuggerUrl } } = await request({
+      json: true,
+      resolveWithFullResponse: true,
+      uri: `http://${address}:${config.remote.port}/json/version`,
+    })
+    browser = await puppeteer.connect({ browserWSEndpoint: webSocketDebuggerUrl })
+  } else if (config.connect) {
     browser = await puppeteer.connect(config.connect)
   } else {
     browser = await puppeteer.launch(config.launch)
