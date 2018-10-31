@@ -1,6 +1,6 @@
 import readConfig from './readConfig'
 
-export async function loadPuppeteer() {
+async function loadPuppeteer() {
   const config = await readConfig()
   const packageName = config.puppeteerCore ? 'puppeteer-core' : 'puppeteer'
 
@@ -18,3 +18,5 @@ export async function loadPuppeteer() {
 
   return puppeteer
 }
+
+export default loadPuppeteer
