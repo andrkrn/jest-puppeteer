@@ -4,8 +4,9 @@ async function loadPuppeteer() {
   const config = await readConfig()
   const packageName = config.puppeteerCore ? 'puppeteer-core' : 'puppeteer'
 
+  let puppeteer
   try {
-    const puppeteer = require(packageName)
+    puppeteer = require(packageName)
   } catch (e) {
     console.error(
       `
