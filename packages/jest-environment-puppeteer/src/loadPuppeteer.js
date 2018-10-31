@@ -5,7 +5,7 @@ export async function loadPuppeteer() {
   const packageName = config.puppeteerCore ? 'puppeteer-core' : 'puppeteer'
 
   try {
-    module.exports = require(packageName)
+    const puppeteer = require(packageName)
   } catch (e) {
     console.error(
       `
@@ -15,4 +15,6 @@ export async function loadPuppeteer() {
       e,
     )
   }
+
+  return puppeteer
 }
