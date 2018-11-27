@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.2](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-puppeteer-preset/compare/v3.5.1...v3.5.2) (2018-11-27)
+
+**Note:** Version bump only for package jest-puppeteer-preset
+
+
+
+
+
+## [3.5.1](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-puppeteer-preset/compare/v3.5.0...v3.5.1) (2018-11-11)
+
+**Note:** Version bump only for package jest-puppeteer-preset
+
+
+
+
+
+# [3.5.0](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-puppeteer-preset/compare/v3.4.0...v3.5.0) (2018-11-04)
+
+
+### Features
+
+* add incognito context support ([#140](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-puppeteer-preset/issues/140)) ([5b8983a](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-puppeteer-preset/commit/5b8983a)), closes [#133](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-puppeteer-preset/issues/133)
+
+
+
+
+
 <a name="3.4.0"></a>
 # [3.4.0](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-puppeteer-preset/compare/v3.3.1...v3.4.0) (2018-09-24)
 

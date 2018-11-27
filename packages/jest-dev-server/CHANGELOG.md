@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.2](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/compare/v3.5.1...v3.5.2) (2018-11-27)
+
+
+### Bug Fixes
+
+* **security:** upgrade dependencies ([e913425](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/commit/e913425))
+* **security:** upgrade terminate ([#158](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/issues/158)) ([06fd89e](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/commit/06fd89e))
+
+
+
+
+
+## [3.5.1](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/compare/v3.5.0...v3.5.1) (2018-11-11)
+
+
+### Bug Fixes
+
+* avoid prompting for super user login (as possible) ([#149](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/issues/149)) ([1701e9b](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/commit/1701e9b))
+
+
+
+
+
+# [3.5.0](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/compare/v3.4.0...v3.5.0) (2018-11-04)
+
+
+### Bug Fixes
+
+* **jest-dev-server:** do not require port to run server ([5aee5fe](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/commit/5aee5fe)), closes [#146](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/issues/146)
+* **jest-dev-server:** do not scan process if usedPortAction is "ignore" ([cceb0bd](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/commit/cceb0bd)), closes [#96](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/issues/96)
+
+
+
+
+
 <a name="3.4.0"></a>
 # [3.4.0](https://github.com/smooth-code/jest-puppeteer/tree/master/packages/jest-dev-server/compare/v3.3.1...v3.4.0) (2018-09-24)
 

@@ -1,7 +1,7 @@
 {
   "name": "spawnd",
   "description": "Spawn a dependent child process.",
-  "version": "3.4.0",
+  "version": "3.5.2",
   "main": "lib/index.js",
   "repository": "https://github.com/smooth-code/jest-puppeteer/tree/master/packages/spawnd",
   "author": "Greg Bergé <berge.greg@gmail.com>",
@@ -24,7 +24,7 @@
   "dependencies": {
     "exit": "^0.1.2",
     "signal-exit": "^3.0.2",
-    "terminate": "^2.1.0",
+    "terminate": "^2.1.2",
     "wait-port": "^0.2.2"
   }
 }

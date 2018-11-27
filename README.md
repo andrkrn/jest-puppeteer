@@ -27,7 +27,7 @@ jest-puppeteer is an MIT-licensed open source project. It's an independent proje
 
 ### Gold Sponsors
 
-Gold Sponsors are those who have pledged $100/month and more to jest-puppeteer.
+Gold Sponsors are those who have pledged \$100/month and more to jest-puppeteer.
 
 [![gold-sponsors](https://opencollective.com/jest-puppeteer/tiers/gold-sponsors.svg?avatarHeight=120&width=600)](https://opencollective.com/jest-puppeteer/order/6045)
 
@@ -53,6 +53,22 @@ describe('Google', () => {
     await expect(page).toMatch('google')
   })
 })
+```
+
+### Running puppeteer in CI environments
+
+Most continuous integration platforms limit the number of threads one can use. If you have more than one test suite running puppeteer chances are that your test will timeout. This is because jest will try to run puppeteer in parallel and the CI platform won't be able to handle all the parallel jobs in time. A fix to this is to run your test serially when in a CI environment. Users have discovered that [running test serially in such environments can render up to 50%](https://jestjs.io/docs/en/troubleshooting#tests-are-extremely-slow-on-docker-and-or-continuous-integration-ci-server) of performance gains.
+
+This can be achieved through the CLI by running:
+
+```sh
+jest --runInBand
+```
+
+Alternatively, you can set jest to use as a max number of workers the amount that your CI environment supports:
+
+```
+jest --maxWorkers=2
 ```
 
 ## Recipes
@@ -148,6 +164,25 @@ module.exports = {
     context: true,
     jestPuppeteer: true,
   },
+}
+```
+
+### Specify a `setupTestFrameworkScriptFile`
+
+Jest Puppeteer use `expect-puppeteer` as `setupTestFrameworkScriptFile`. If you want to use `expect-puppeteer` don't forget to add it in your custom `setupTestFrameworkScriptFile`:
+
+```js
+// setupTestFrameworkScriptFile.js
+require('expect-puppeteer')
+
+// Your custom setup
+```
+
+```js
+// jest.config.js
+module.exports = {
+  // ...
+  setupTestFrameworkScriptFile: './setupTestFrameworkScriptFile.js',
 }
 ```
 
